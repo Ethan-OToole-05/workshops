@@ -25,6 +25,7 @@ public class AnnuityCalculator {
         monthlyPayments = years * 12;
         //Formula below calculates the annuity.
         //Formula from workbook 1 - workshop.
+        //Link from workbook: https://financialmentor.com/calculator/present-value-of-annuity-calculator
         monthlyPayments = monthlyPayments * -1;
         totalAnnuity = payment * ((1 - (float) Math.pow(1 + monthlyInterest, monthlyPayments)) / (monthlyInterest));
 
