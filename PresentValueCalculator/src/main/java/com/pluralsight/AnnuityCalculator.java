@@ -28,7 +28,7 @@ public class AnnuityCalculator {
         monthlyPayments = monthlyPayments * -1;
         totalAnnuity = payment * ((1 - (float) Math.pow(1 + monthlyInterest, monthlyPayments)) / (monthlyInterest));
 
-        System.out.println(totalAnnuity);
+        System.out.printf("Your total annuity will be: $%.2f ", totalAnnuity);
 
     }
 }
