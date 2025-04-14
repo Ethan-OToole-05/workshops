@@ -6,7 +6,7 @@ public class AnnuityCalculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        float payment, interestRate, totalInterest, totalAnnuity, monthlyInterest;
+        float payment, interestRate, totalAnnuity, monthlyInterest;
         int years, monthlyPayments;
 
         System.out.println("Welcome to the annuity value calculator.");
@@ -23,10 +23,10 @@ public class AnnuityCalculator {
 
         monthlyInterest = interestRate / 12;
         monthlyPayments = years * 12;
-        //Formula below calculates the future value of the item.
+        //Formula below calculates the annuity.
         //Formula from workbook 1 - workshop.
         monthlyPayments = monthlyPayments * -1;
-        totalAnnuity = payment * (1 - (float) Math.pow(1 + monthlyInterest, monthlyPayments) / monthlyInterest);
+        totalAnnuity = payment * ((1 - (float) Math.pow(1 + monthlyInterest, monthlyPayments)) / (monthlyInterest));
 
         System.out.println(totalAnnuity);
 
